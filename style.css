@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+background-image: url(./images/64b9451865a683fd39bccfa1_5f6e93d250a6d04f4eae9f02_Backgrounds-WFU-thumbnail-\(size\).jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+.main{ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    text-align: center;
+    color: blueviolet;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    
+    
+
+}
+
+/* container 얘가 싹 다 들어가는 공간 */
+.container{
+    background-color: white;
+    min-height: 100vh;
+    /* 미니멈 하이트 100vh 보는 화면의 높이만큼 view height  100%의 뷰 하이트 */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+/* google 검색한 box-shadow  */
+}
+
+.task-area{
+    border: 1px solid lightgray ;
+}
+
+.input-area{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 30px;;
+}
+
+.task-tabs{
+    display: flex;
+    border-bottom: 1px solid lightgray ;
+    position: relative;
+}
+/* task -tabs 의 div 하나하나에 패딩 주기 위해 위에 .task-tabs 전체에다 주면 전체가 묶여서 패딩값이 들어감 */
+.task-tabs div{
+    padding: 1em;
+    text-align: center;
+    min-width: 20vh;
+}
+
+#under-line{
+    height: 4px;
+    background-color: lightblue;
+    position: absolute;
+    width: 65px;
+    left: 0px;
+    top: 53px;
+    padding: 0px;
+    /* div 태그에 기본 padding 값 있어서 빼주는것 */
+} 
+/* 그냥 positon : absolute를 주면 기준값이 없어서 화면에 뜨지 않는다 .  */
+/* 부모인 task-tabs 에 position:relative 를 줘 기준값을 잡아야 한다. */
+
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.task-done{
+    text-decoration: line-through;
+    background-color: lightpink;
+    flex-grow: 1;
+}
+
+.fa-check{
+    color: green;
+  
+
+}
+
+.fa-rotate-left{
+    color: gray;
+}
+.fa-trash-can{
+    color: RED;
+}
+.button{
+    background-color: plum;
+    border: 3px wheat;
+    border-radius: 20px;
+    padding: 10px 40PX;
+
+}
+
+button:hover{
+    background-color: rebeccapurple;
+}
+
+/* how to change cursor on div tas css */
+
+.task-tabs div{
+    cursor: pointer
+}
+
+.textbox{
+    border: ridge 1px palevioletred;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 25px;
+}
+
+
+.fa-plus{
+    color:green;
+
+}
+
+.addbutton{
+    margin-left: 5px;
+    border: 3px dashed slateblue;
+    background-color:white;
+    border-radius: 5px;
+}
