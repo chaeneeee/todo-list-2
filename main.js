@@ -48,7 +48,7 @@ function addTask(){
     }
     taskList.push(todo);
     console.log(taskList);
-    render()
+    filter()
  
 }
 
@@ -65,7 +65,7 @@ function render(){
     let list=[]
     if(mode==="all"){
         list = taskList;
-    }else if(mode ==="ongoing" || "done"){
+    }else if(mode ==="ongoing" ||  "done"){
         list=filterList
     }
     let resultHTML =''
@@ -106,10 +106,12 @@ function toggleComplete(id) {
         break;
     }
     }
-    render();
-    console.log(taskList); 
+    filter();
+    // ui 업데이트
+   
 // !taskList[i].isComplete; !=아니다 ! 는 지금 갖고 있는 값의 반대를 데려온다 false 면 true 를 true면 false를
 }
+
 
 function deleteTask(id){
     for(let i=0; i<filterList.length; i++){
@@ -151,16 +153,18 @@ function filter(event) {
     if(taskList[i].isComplete===false){filterList.push(taskList[i])
     }
     }
-    render();
-    console.log("진행중",filterList)
+  render()
+
+   
 } else if (mode==="done"){
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].isComplete===true){filterList.push(taskList[i])
         }
-   
-}
-}
-    render();
+
+
+}  render();
+} 
+    
 }
 // "filter",event.target.id 이벤트로 클릭한 타겟을 가져온다 근데 타겟의 id값만 가져온다 
 
